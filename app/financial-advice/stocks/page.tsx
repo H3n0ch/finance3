@@ -149,7 +149,7 @@ export default function StocksPage() {
             </ul>
             <ul className="list-disc list-inside text-gray-600 space-y-3">
               <li>Stay informed about market news and company developments</li>
-              <li>Don't try to time the market</li>
+              <li>Don&apos;t try to time the market</li>
               <li>Reinvest dividends for compound growth</li>
               <li>Consider tax implications of your investments</li>
             </ul>
