@@ -60,13 +60,23 @@ export default function ForexPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+      <div className="relative">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/forex-hero.svg"
+            alt="Forex Trading"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-indigo-900/80"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center text-white">
+            <h1 className="text-4xl font-bold mb-6">
               {t('forexTrading')}
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
               {t('aboutText')}
             </p>
           </div>
@@ -116,9 +126,17 @@ export default function ForexPage() {
         </div>
 
         {/* Trading Styles */}
-        <div className="bg-gray-50 rounded-xl p-8">
-          <h2 className="text-3xl font-bold text-center mb-12">{t('tradingTools')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-gray-50 rounded-xl p-8 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <Image
+              src="/images/trading-pattern.svg"
+              alt="Trading Analysis"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <h2 className="text-3xl font-bold text-center mb-12 relative">{t('tradingTools')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             {tradingStyles.map((style) => (
               <div key={style.title} className="bg-white rounded-lg shadow-lg p-6">
                 <h3 className="text-xl font-semibold mb-3">{style.title}</h3>
@@ -126,7 +144,7 @@ export default function ForexPage() {
                 <ul className="space-y-2">
                   {style.characteristics.map((characteristic) => (
                     <li key={characteristic} className="flex items-center text-gray-600">
-                      <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                       {characteristic}

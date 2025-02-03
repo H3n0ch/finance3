@@ -18,22 +18,24 @@ export default function LayoutContent({ children }: { children: React.ReactNode 
               </Link>
               <div className="hidden md:block ml-10">
                 <div className="flex items-center space-x-4">
-              <Link href="/financial-advice/stocks" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                {t('stocks')}
-              </Link>
-              <Link href="/financial-advice/forex" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                {t('forex')}
-              </Link>
-              <Link href="/financial-advice/commodities" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                {t('commodities')}
-              </Link>
-              <Link href="/financial-advice/crypto" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                {t('crypto')}
-              </Link>
-              <Link href="/financial-advice/investments" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                {t('investments')}
-              </Link>
-              
+                  <Link href="/financial-advice/stocks" className="hover:bg-blue-700 px-3 py-2 rounded-md">
+                    {t('stocks')}
+                  </Link>
+                  <Link href="/financial-advice/forex" className="hover:bg-blue-700 px-3 py-2 rounded-md">
+                    {t('forex')}
+                  </Link>
+                  <Link href="/financial-advice/commodities" className="hover:bg-blue-700 px-3 py-2 rounded-md">
+                    {t('commodities')}
+                  </Link>
+                  <Link href="/financial-advice/crypto" className="hover:bg-blue-700 px-3 py-2 rounded-md">
+                    {t('crypto')}
+                  </Link>
+                  <Link href="/financial-advice/retirement" className="hover:bg-blue-700 px-3 py-2 rounded-md">
+                    Retirement
+                  </Link>
+                  <Link href="/financial-advice/planning" className="hover:bg-blue-700 px-3 py-2 rounded-md">
+                    Planning
+                  </Link>
                 </div>
               </div>
             </div>
@@ -86,8 +88,13 @@ export default function LayoutContent({ children }: { children: React.ReactNode 
                   </Link>
                 </li>
                 <li>
-                  <Link href="/financial-advice/investments" className="text-gray-400 hover:text-white">
-                    {t('investments')}
+                  <Link href="/financial-advice/retirement" className="text-gray-400 hover:text-white">
+                    Retirement Planning
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/financial-advice/planning" className="text-gray-400 hover:text-white">
+                    Financial Planning
                   </Link>
                 </li>
               </ul>

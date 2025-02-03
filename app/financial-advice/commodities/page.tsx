@@ -79,13 +79,23 @@ export default function CommoditiesPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+      <div className="relative">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/commodities-hero.svg"
+            alt="Commodities Trading"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-indigo-900/80"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center text-white">
+            <h1 className="text-4xl font-bold mb-6">
               Commodity Trading Guide
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
               Discover how to invest in physical commodities and understand the factors that drive their prices.
             </p>
           </div>
@@ -146,9 +156,17 @@ export default function CommoditiesPage() {
         </div>
 
         {/* Investment Methods */}
-        <div className="bg-gray-50 rounded-xl p-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Ways to Invest</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-gray-50 rounded-xl p-8 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <Image
+              src="/images/trading-pattern.svg"
+              alt="Trading Analysis"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <h2 className="text-3xl font-bold text-center mb-12 relative">Ways to Invest</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             {investmentMethods.map((method) => (
               <div key={method.title} className="bg-white rounded-lg shadow-lg p-6">
                 <h3 className="text-xl font-semibold mb-3">{method.title}</h3>
