@@ -49,7 +49,7 @@ export default function Testimonials() {
                   <p className="text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
-              <blockquote className="text-gray-600 italic">"{testimonial.quote}"</blockquote>
+              <blockquote className="text-gray-600 italic">&quot;{testimonial.quote}&quot;</blockquote>
             </div>
           ))}
         </div>

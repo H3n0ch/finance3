@@ -92,10 +92,10 @@ export default function RetirementPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-6">
-              Retirement Planning Guide
+              {t('retirementPlanningGuide')}
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Plan for a secure and comfortable retirement with our comprehensive guide to retirement planning and investment strategies.
+              {t('retirementPlanningDescription')}
             </p>
           </div>
         </div>
@@ -141,7 +141,9 @@ export default function RetirementPage() {
               className="object-cover"
             />
           </div>
-          <h2 className="text-3xl font-bold text-center mb-12 relative">Retirement Strategies</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 relative">
+            {t('retirementStrategies')}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             {strategies.map((strategy) => (
               <div key={strategy.title} className="bg-white rounded-lg shadow-lg p-6">
@@ -164,19 +166,19 @@ export default function RetirementPage() {
 
         {/* Additional Resources */}
         <div className="mt-12 bg-blue-50 rounded-lg p-8">
-          <h2 className="text-2xl font-semibold mb-6">Additional Resources</h2>
+          <h2 className="text-2xl font-semibold mb-6">{t('additionalResources')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ul className="list-disc list-inside text-gray-600 space-y-3">
-              <li>Retirement calculators and tools</li>
-              <li>Social Security benefit estimators</li>
-              <li>Healthcare cost planning</li>
-              <li>Long-term care insurance guides</li>
+              <li>{t('retirementCalculators')}</li>
+              <li>{t('socialSecurityEstimators')}</li>
+              <li>{t('healthcareCostPlanning')}</li>
+              <li>{t('longTermCareGuides')}</li>
             </ul>
             <ul className="list-disc list-inside text-gray-600 space-y-3">
-              <li>Estate planning resources</li>
-              <li>Tax planning strategies</li>
-              <li>Required Minimum Distribution calculators</li>
-              <li>Medicare enrollment guides</li>
+              <li>{t('estatePlanningResources')}</li>
+              <li>{t('taxPlanningStrategies')}</li>
+              <li>{t('minimumDistributionCalculators')}</li>
+              <li>{t('medicareEnrollmentGuides')}</li>
             </ul>
           </div>
         </div>

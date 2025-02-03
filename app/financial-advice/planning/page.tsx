@@ -1,11 +1,7 @@
-"use client";
-
 import Image from 'next/image';
 import Layout from '../../components/layout';
-import { useLanguage } from '../../i18n/LanguageContext';
 
 export default function PlanningPage() {
-  const { t } = useLanguage();
   const sections = [
     {
       title: 'Goal Setting',
